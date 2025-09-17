@@ -1,10 +1,10 @@
 # airbnb-dbt-snowflake512
 
-Airbnb Data Warehouse using dbt & Snowflake
+# Airbnb Data Warehouse using dbt & Snowflake
 
 This project demonstrates an end-to-end data modeling pipeline using dbt and Snowflake, with Airbnb datasets as the source. The goal is to transform raw data into clean, analytics-ready tables for reporting and self-service analytics.
 
-Project Overview
+## Project Overview
 
 Data Modeling: Raw Airbnb data is organized into staging, core, and data mart layers.
 
