@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: airbnb
+    database: AIRBNB
+    schema: RAW
+    tables:
+      - name: listings
+      - name: hosts
+      - name: reviews
