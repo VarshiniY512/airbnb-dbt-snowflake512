@@ -53,14 +53,14 @@ Snowflake Setup (Database / Data Warehouse)
 Run the following scripts in Snowflake.
 
 Create User and Roles for Data Transformation
--- Use an admin role
+Use an admin role
 USE ROLE ACCOUNTADMIN;
 
--- Create the `transform` role
+Create the `transform` role
 CREATE ROLE IF NOT EXISTS transform;
 GRANT ROLE TRANSFORM TO ROLE ACCOUNTADMIN;
 
--- Create the `dbt` user and assign to role
+Create the `dbt` user and assign to role
 CREATE USER IF NOT EXISTS dbt
  PASSWORD='dbtPassword123'
  LOGIN_NAME='dbt'
@@ -71,11 +71,11 @@ CREATE USER IF NOT EXISTS dbt
  COMMENT='DBT user used for data transformation';
 GRANT ROLE transform to USER dbt;
 
--- Create our database and schemas
+Create our database and schemas
 CREATE DATABASE IF NOT EXISTS AIRBNB;
 CREATE SCHEMA IF NOT EXISTS AIRBNB.RAW;
 
--- Set up permissions to role `transform`
+Set up permissions to role `transform`
 GRANT ALL ON WAREHOUSE COMPUTE_WH TO ROLE transform;
 GRANT ALL ON DATABASE AIRBNB to ROLE transform;
 GRANT ALL ON ALL SCHEMAS IN DATABASE AIRBNB to ROLE transform;
@@ -84,12 +84,12 @@ GRANT ALL ON ALL TABLES IN SCHEMA AIRBNB.RAW to ROLE transform;
 GRANT ALL ON FUTURE TABLES IN SCHEMA AIRBNB.RAW to ROLE transform;
 Import Airbnb data from public S3 bucket
 
--- Set up the defaults
+Set up the defaults
 USE WAREHOUSE COMPUTE_WH;
 USE DATABASE airbnb;
 USE SCHEMA RAW;
 
--- Create our three tables and import the data from S3
+ Create our three tables and import the data from S3
 CREATE OR REPLACE TABLE raw_listings
     (id integer,
     listing_url string,
@@ -139,7 +139,7 @@ COPY INTO raw_hosts (id, name, is_superhost, created_at, updated_at)
     FIELD_OPTIONALLY_ENCLOSED_BY = '"');
     
 Create User and Roles for Reporting (Preset)
--- Reporting User
+Reporting User
 USE ROLE ACCOUNTADMIN;
 CREATE ROLE IF NOT EXISTS REPORTER;
 CREATE USER IF NOT EXISTS PRESET
