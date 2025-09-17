@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_hosts_cleansed
+    description: "Cleansed dimension of Airbnb hosts"
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_listings_cleansed
+    description: "Cleansed dimension of Airbnb listings with host details"
+    columns:
+      - name: listing_id
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_fullmoon_reviews
+    description: "Fact table of reviews that happened on full moon dates"
+    columns:
+      - name: review_id
+        tests:
+          - not_null
+          - unique
+      - name: full_moon_date
+        tests:
+          - not_null
