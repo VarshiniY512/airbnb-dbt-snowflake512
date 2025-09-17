@@ -32,7 +32,9 @@ How it Works:
 2) Run dbt transformations:
 
    a) Staging models clean and standardize the data.
+
    b) Core models apply Slowly Changing Dimension (SCD) logic and cleansed dimensions.
+
    c) Data marts produce curated fact tables.
 
 4) Run dbt tests to ensure data quality.
