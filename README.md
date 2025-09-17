@@ -6,13 +6,16 @@ This project demonstrates an end-to-end data modeling pipeline using dbt and Sno
 
 ## Project Overview
 
-Data Modeling: Raw Airbnb data is organized into staging, core, and data mart layers.
+#### Data Modeling:  
+    Raw Airbnb data is organized into staging, core, and data mart layers.
 
-Testing & Documentation: Integrated dbt tests (uniqueness, not null) and generated lineage/documentation using dbt docs.
+#### Testing & Documentation: 
+     Integrated dbt tests (uniqueness, not null) and generated lineage/documentation using dbt docs.
 
-Analytics Enablement: Published curated fact and dimension models for use by BI and reporting teams.
+#### Analytics Enablement: 
+     Published curated fact and dimension models for use by BI and reporting teams.
 
-Project Layers
+## Project Layers
 
 Raw Layer: airbnb.reviews, airbnb.listings, airbnb.hosts, plus seed data (seed_full_moon_dates).
 
@@ -24,7 +27,7 @@ Data Mart Layer: mart_fullmoon_reviews.
 
 Ad Hoc Layer (analyses): full_moon_no_sleep.
 
-Tech Setup
+## Tech Setup
 
 Python: 3.11.3
 
@@ -56,7 +59,7 @@ mart_fullmoon_reviews
 Ad Hoc Layer (/analyses)
 full_moon_no_sleep
 
-How it Works:
+## How it Works:
 
 1) Load raw Airbnb datasets into Snowflake.
 
@@ -72,7 +75,7 @@ How it Works:
 
 5) Launch dbt docs serve to explore documentation and lineage.
 
-🔗 Resources
+## Resources
 
 [dbt Documentation](https://docs.getdbt.com/)
 
