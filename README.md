@@ -33,13 +33,19 @@ Load raw Airbnb datasets into Snowflake.
 Run dbt transformations:
 
 Staging models clean and standardize the data.
+
 Core models apply Slowly Changing Dimension (SCD) logic and cleansed dimensions.
+
 Data marts produce curated fact tables.
+
 Run dbt tests to ensure data quality.
+
 Launch dbt docs serve to explore documentation and lineage.
 
 🔗 Resources
 
 [dbt Documentation](https://docs.getdbt.com/)
+
 [dbt Discourse Q&A](https://discourse.getdbt.com/)
+
 [dbt Slack Community](https://www.getdbt.com/community)
