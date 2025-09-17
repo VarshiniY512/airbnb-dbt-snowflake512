@@ -28,19 +28,17 @@ full_moon_no_sleep
 
 How it Works:
 
-Load raw Airbnb datasets into Snowflake.
+1) Load raw Airbnb datasets into Snowflake.
 
-Run dbt transformations:
+2) Run dbt transformations:
 
-Staging models clean and standardize the data.
+   a) Staging models clean and standardize the data.
+   b) Core models apply Slowly Changing Dimension (SCD) logic and cleansed dimensions.
+   c) Data marts produce curated fact tables.
 
-Core models apply Slowly Changing Dimension (SCD) logic and cleansed dimensions.
+4) Run dbt tests to ensure data quality.
 
-Data marts produce curated fact tables.
-
-Run dbt tests to ensure data quality.
-
-Launch dbt docs serve to explore documentation and lineage.
+5) Launch dbt docs serve to explore documentation and lineage.
 
 🔗 Resources
 
